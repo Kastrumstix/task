@@ -1,12 +1,12 @@
 def all_variants(text):
     n = len(text)
     for i in range(1 << n):
-        subsequence = []
+        a = []
         for j in range(n):
             if i & (1 << j):
-                subsequence.append(text[j])
-        yield ''.join(subsequence)
+                a.append(text[j])
+        yield ''.join(a)
 
 text = "abc"
-for variant in all_variants(text):
-    print(variant)
+for i in all_variants(text):
+    print(i)
