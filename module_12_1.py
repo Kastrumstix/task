@@ -19,20 +19,20 @@ class Runner:
 class RunnerTest(unittest.TestCase):
 
     def test_walk(self):
-        runner = Runner("Alice")
+        runner = Runner("1user")
         for _ in range(10):
             runner.walk()
         self.assertEqual(runner.distance, 50)
 
     def test_run(self):
-        runner = Runner("Bob")
+        runner = Runner("2user")
         for _ in range(10):
             runner.run()
         self.assertEqual(runner.distance, 100)
 
     def test_challenge(self):
-        runner1 = Runner("Charlie")
-        runner2 = Runner("Diana")
+        runner1 = Runner("3user")
+        runner2 = Runner("4user")
 
         for _ in range(10):
             runner1.run()
